@@ -1,0 +1,32 @@
+# --- IDE & OS ---
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
+
+# --- SECURITÉ (TRÈS IMPORTANT) ---
+# On ignore les fichiers contenant des mots de passe
+.env
+.env.local
+.env.*.local
+docker-compose.override.yml
+
+# --- PHP & DEPENDANCES ---
+vendor/
+composer.phar
+.phpunit.result.cache
+
+# --- DOSSIERS DE DONNÉES DU NAS ---
+# On évite d'envoyer les photos ou la base de données sur GitHub
+data/
+db_data/
+storage/*.sql
+logs/
+*.log
+temp/
+.cache/
+
+# --- DOCKER ---
+# On garde le docker-compose.yml, mais on ignore les données persistantes
+# Si tu as un dossier où Docker stocke ses volumes, ajoute-le ici
