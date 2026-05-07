@@ -1,0 +1,19 @@
+services:
+  portfolio:
+    image: php:8.2-apache
+    container_name: Portfolio_Prod
+    restart: always
+
+    ports:
+      - "15003:80"
+
+    volumes:
+      - ./src:/var/www/html/
+
+    environment:
+      - TZ=Europe/Paris
+
+    deploy:
+      resources:
+        limits:
+          memory: 256M
